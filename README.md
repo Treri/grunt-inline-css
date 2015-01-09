@@ -9,6 +9,9 @@ We may want put the css file to js file. So that we can only have one request wh
 
 Thus, we can use the grunt plugin.
 
+
+Below example config, will insert every css file's content in css directory to corresponding js file in controllers directory.
+
 ```js
 grunt.initConfig({
   inline_css: {
