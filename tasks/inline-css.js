@@ -29,12 +29,6 @@ module.exports = function(grunt){
       options.main :
       false;
 
-    replace = (options.replace && typeof options.replace === 'function') ?
-      options.replace :
-      function(name){
-        return name.replace(/\.css$/, '.js');
-      }
-
     if(main){
       mainContent = grunt.file.read(main);
       mainContent = mainContent + '\n' + addStyle;
@@ -51,11 +45,15 @@ module.exports = function(grunt){
         }
       });
 
+      // replace name
+      if(options.replace && typeof options === 'function'){
+        f.dest = options.replace(f.dest);
+      }
+
       if(src.length === 0){
         grunt.log.warn('Destination ' + chalk.cyan(f.dest) + ' not written because src files were empty.');
       }
 
-      f.dest = replace(f.dest);
       if(!grunt.file.exists(f.dest)){
         return;
       }
