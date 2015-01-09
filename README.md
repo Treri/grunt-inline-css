@@ -27,7 +27,7 @@ grunt.initConfig({
         '**/*.css'
       ],
       dest: 'controllers',
-      ext: '.min.js'
+      ext: '.js'
     }
   }
 });
