@@ -1,0 +1,31 @@
+{
+  "name": "grunt-inline-css",
+  "version": "1.0.0",
+  "description": "inline css to js files",
+  "main": "tasks/inline-css.js",
+  "files": [
+    "tasks"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Treri",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Treri/grunt-inline-css.git"
+  },
+  "keywords": [
+    "css",
+    "grunt",
+    "inline"
+  ],
+  "bugs": {
+    "url": "https://github.com/Treri/grunt-inline-css/issues"
+  },
+  "homepage": "https://github.com/Treri/grunt-inline-css",
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "uglify-js": "^2.4.16"
+  }
+}
