@@ -60,7 +60,6 @@ module.exports = function(grunt){
 
       var cssContent = ''
         , jsContent = ''
-        , prefix = ''
         , output = ''
         ;
 
@@ -70,12 +69,7 @@ module.exports = function(grunt){
 
       jsContent = grunt.file.read(f.dest);
 
-      if(!main){
-        prefix = addStyle;
-      }
-
-      output += prefix;
-      output += 'addStyle("';
+      output += 'addStyle&&addStyle("';
       output += cssContent;
       output += '");\n';
       output += jsContent;
