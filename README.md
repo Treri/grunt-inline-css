@@ -19,7 +19,7 @@ grunt.initConfig({
       options: {
         main: 'main.js'
         // the addStyle function will apend to the file.
-        // If no `options.main` applied, every js file will prepend the addStyle function
+        // If no `options.main` applied, no addStyle function will be added.
       },
       expand: true,
       cwd: 'css',
