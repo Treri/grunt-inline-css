@@ -25,9 +25,10 @@ module.exports = function(grunt){
 
     options = this.options();
 
-    main = (options.main && grunt.file.exists(options.main)) ?
-      options.main :
-      false;
+    main = (options.main && grunt.file.exists(options.main))
+      ? options.main
+      : false
+      ;
 
     if(main){
       mainContent = grunt.file.read(main);
