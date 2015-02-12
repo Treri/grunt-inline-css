@@ -19,7 +19,6 @@ module.exports = function(grunt){
     var options
       , main
       , mainContent
-      , replace
       , total = 0
       ;
 
@@ -46,16 +45,13 @@ module.exports = function(grunt){
         }
       });
 
-      // replace name
-      if(options.replace && typeof options === 'function'){
-        f.dest = options.replace(f.dest);
-      }
-
       if(src.length === 0){
         grunt.log.warn('Destination ' + chalk.cyan(f.dest) + ' not written because src files were empty.');
+        return;
       }
 
       if(!grunt.file.exists(f.dest)){
+        grunt.log.warn('Destination ' + chalk.cyan(f.dest) + ' not written because dest files were not exists.');
         return;
       }
 
@@ -71,7 +67,7 @@ module.exports = function(grunt){
       jsContent = grunt.file.read(f.dest);
 
       output += 'addStyle&&addStyle("';
-      output += cssContent;
+      output += cssContent.replace(/"/g, '\\"');
       output += '");\n';
       output += jsContent;
 
