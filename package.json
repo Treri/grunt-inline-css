@@ -1,6 +1,6 @@
 {
   "name": "grunt-inline-css",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "inline css to js files",
   "main": "tasks/inline-css.js",
   "files": [
