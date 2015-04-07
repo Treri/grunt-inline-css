@@ -66,7 +66,7 @@ module.exports = function(grunt){
 
       jsContent = grunt.file.read(f.dest);
 
-      output += 'addStyle&&addStyle("';
+      output += 'window.addStyle&&addStyle("';
       output += cssContent ? cssContent.replace(/\\/g, '\\\\').replace(/"/g, '\\"') : cssContent;
       output += '");\n';
       output += jsContent;
